@@ -19,9 +19,4 @@ WHERE (((Species.genus)="kadosactis") and ((SPECIES.Species)="rosea")) OR
 
 and so on and so forth....
 
-THIS ACTUALLY WORKS...TWO POINTS OF CONTACT FOR TWO TABLES
 
-select b.speciesid, b.speccode, a.phylum, a."class", a."order", a.genus, a.species
-from cnidaria_antarctic a left join aquamaps_2018 b
-on a.genus=b.genus and a.species=b.species
-group by b.speciesid, b.speccode, a.phylum, a."class", a."order", a.genus, a.species;
