@@ -4,3 +4,17 @@ WHERE (((FAMILIES.Class)="Anthozoa"));
 
 where at the end of the query and where has parenthesis. 
 
+select species.speccode, species.genus, species.species, families.order, families.class, families.phylum,
+species.fresh, species.brack, species.saltwater, species.demerspelag, species.depthrangeshallow, 
+species.depthrangedeep, species.depthrangeref, species.depthrangecomshallow, species.depthrangecomdeep,
+species.depthcomref, stocks.northernmost, stocks.northsouthn, stocks.southermost, stocks.northsouths, 
+stocks.westernmost, stocks.westeastw, stocks.easternmost, stocks.westeaste, stocks.boundingref, 
+stocks.boundingmethod 
+FROM (species INNER JOIN families ON species.famcode=families.famcode) INNER JOIN stocks 
+ON species.speccode=stocks.speccode 
+WHERE (((Species.genus)="kadosactis") and ((SPECIES.Species)="rosea")) OR 
+(((SPECIES.Genus)="Amphianthus") AND ((SPECIES.Species)="margaritaceus")) OR 
+(((SPECIES.Genus)="Ptychodactis") AND ((SPECIES.Species)="patula")) OR 
+(((SPECIES.Genus)="edwardsia") AND ((SPECIES.Species)="andresi"));
+
+and so on and so forth....
