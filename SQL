@@ -1,0 +1,6 @@
+SELECT SPECIES.SpecCode, SPECIES.Genus, SPECIES.Species, FAMILIES.Order, FAMILIES.Class, FAMILIES.Phylum
+FROM SPECIES INNER JOIN FAMILIES ON SPECIES.FamCode = FAMILIES.FamCode
+WHERE (((FAMILIES.Class)="Anthozoa"));
+
+where at the end of the query and where has parenthesis. 
+
